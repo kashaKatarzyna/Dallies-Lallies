@@ -8,13 +8,23 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+var fs     = require('fs');
 var watson = require('watson-developer-cloud');
 var visual_recognition = watson.visual_recognition({
+  url: 'https://gateway-a.watsonplatform.net/visual-recognition/api/',
   api_key: 'bfdb077236c9505bd11993340608633cf9ea730e',
+  version:'v3',
   version_date: '2016-05-20'
 });
 
+
 var app = express();
+
+app.use(express.static('public'));
+app.use(express.static('node_modules'));
+
+app.use(bodyParser.json());   // This is the type of body we're interested in
+app.use(bodyParser.urlencoded({extended: false}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -62,5 +72,18 @@ app.use(function(err, req, res, next) {
   });
 });
 
+
+  var params = {
+        images_file: fs.createReadStream('./mt.jpg')
+        // url:'http://www.aspca.org/sites/default/files/styles/medium_image_300x200/public/field/image/plants/saint-bernards-lily.jpg?itok=dBOzAWD_',
+        // classifier_ids: fs.readFileSync('./classifierlist.json')
+  };
+
+  visual_recognition.classify(params, function(err, res) {
+  if (err)
+    console.log(err);
+  else
+    console.log(JSON.stringify(res, null, 2));
+  });
 
 module.exports = app;

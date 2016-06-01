@@ -1,0 +1,22 @@
+{
+    "classifier_ids": ["flowers_834885496"] 
+},
+
+{
+    "classifier_ids": ["flowers_1633055215"] 
+}
+
+
+
+
+// classifier_id: "flowers_484187783",
+// name: "flowers",
+// status: "ready"
+// },
+// {
+// classifier_id: "flowers_446069458",
+// name: "flowers",
+// status: "ready"
+// },
+// {
+// classifier_id: "flowers_834885496"
