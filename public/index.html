@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Dallies & Lallies</title>
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 
 </head>
 <body>
+
   <div class="background-wrap">
     <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted">
       <source src="images/whiteliliesmp4.mp4" type="video/mp4">Video not supported
@@ -13,6 +14,7 @@
   </div> 
 
       <div class="content">
+        <a name="pageTop"></a>
           <div class="nav">
             <a href="#">Home</a>
             <a href="#">About</a>
@@ -24,12 +26,24 @@
           <div class="title">
             <h2>Dallies & Lallies</h2>
 
-            <h1>Smell your flower</h1>
-            <!-- <p>background tiutorial</p> -->
-            <input class="input" type="text" placeholder="Enter">
-          
+            <h1>Let`s smell your flower</h1>
+            
+            <input id="text-input" type="text" placeholder="Enter"><br>
+            <button  class="btn sm submit-text" >Ready</button>
+
+            <ui-view></ui-view>
+          </div><br>
+
+        <div class="result">
+          <!-- <h2 class="name">Bernards Liliy</h2> -->
+          <!-- <div class="picture"></div> -->
+        </div>
+
 
       </div>
-    <script type="text/javascript" href="main.js"></script>
+    <script src="jquery/dist/jquery.js"></script> 
+    <script src="main.js"></script>
   </body>
 </html>
+
+<!-- onclick="saveImage()" -->
