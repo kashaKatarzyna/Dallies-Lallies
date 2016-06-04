@@ -1,4 +1,5 @@
-var app = angular.module('flowerPower', ['ui.router']);
+ var app = angular.module('flowerPower', ['ui.router']);
+
 app.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
@@ -7,20 +8,30 @@ app.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $url
       controller: 'MainCtrl',
       resolve: {
         postPromise: ['flowers', function(flowers){
-          return posts.getAll();
-        }]
-       }
-    })
-    
-    .state('post', {
-      url: '/posts/:id',
-      templateUrl: '/templates/posts.html',
-      controller: 'FlowersCtrl',
-      resolve: {
-        post: ['$stateParams', 'flowers', function($stateParams, flowers) {
-          return posts.get($stateParams.id);
+          return flowers.fetch();
         }]
       }
+      
     })
+
+    // .state('login', {
+    //     url: '/login',
+    //     templateUrl: '/templates/login.html',
+    //     controller:'AuthCtrl'
+    //   })
+    
+    //  .state('register', {
+    //     url: '/register',
+    //     templateUrl: '/templates/register.html',
+    //     controller:'AuthCtrl'
+    //   })
+
+    // .state('post', {
+    //   url: '/posts/:id',
+    //   templateUrl: '/templates/flower.html',
+    //   controller: 'FlowersCtrl',
+      
+    // })
+
   $urlRouterProvider.otherwise('home');
 }]);
