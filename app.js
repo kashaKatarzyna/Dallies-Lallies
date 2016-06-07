@@ -12,8 +12,10 @@ var users = require('./routes/users');
 
 var app = express();
 
-app.use(express.static('public'));
-app.use(express.static('node_modules'));
+mongoose.connect(process.env.MONGOLAB_YELLOW_URI || 'mongodb://localhost/dalliesandlallies');
+
+// app.use(express.static('public'));
+// app.use(express.static('node_modules'));
 
 app.use(bodyParser.json());   // This is the type of body we're interested in
 app.use(bodyParser.urlencoded({extended: false}));

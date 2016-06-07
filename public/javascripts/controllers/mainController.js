@@ -1,15 +1,28 @@
-app.controller('MainCtrl', ['$scope', 'flowers', function($scope, flowers){
+app.controller('MainCtrl', ['$scope','flowers', function($scope, flowers){
   console.log("hey");
+ 
   $scope.flowers = flowers.flowers;
   $scope.input='';
   $scope.result="";
+  flowers.getResult();
+  $scope.results = flowers.results;
 
-  $scope.showFlower = function(){
-    var data = {
-      text: $scope.input
-    };
-    console.log($scope.input);
-    flowers.fetch(data);
-  }
+  console.log($scope.flower)
+
+//   $scope.sendFlower = function(){
+//     console.log($scope.myFile);
+
+//     // var data = {
+//     //   name:"image",
+//     //   file: $scope.myFile
+//     // };       
+//     flowers.getFlower($scope.myFile);
+//   };
+
+//   $scope.showResult = function(){
+//     console.log($scope.result);
+//   };
 
 }]);
+
+//linked to home.html template.connected with flowers.js services
