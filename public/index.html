@@ -2,48 +2,42 @@
 <html>
 <head>
   <title>Dallies & Lallies</title>
-  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  
+   <script src="angular/angular.min.js"></script>
+   <script src="angular-ui-router/release/angular-ui-router.min.js"></script>
 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Sofia|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 </head>
-<body>
 
-  <div class="background-wrap">
-    <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted">
-      <source src="images/whiteliliesmp4.mp4" type="video/mp4">Video not supported
-    </video>
-  </div> 
+<body ng-app="flowerPower" ng-controller="MainCtrl">
 
-      <div class="content">
-        <a name="pageTop"></a>
-          <div class="nav">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Register</a>
-            <a href="#">Log in</a>
-            <a href="#">Contact</a>
-          </div>
+ <div class="content"></div>
+     <div class="nav" ng-controller="NavCtrl">
 
-          <div class="title">
-            <h2>Dallies & Lallies</h2>
-
-            <h1>Let`s smell your flower</h1>
-            
-            <input id="text-input" type="text" placeholder="Enter"><br>
-            <button  class="btn sm submit-text" >Ready</button>
-
-            <ui-view></ui-view>
-          </div><br>
-
-        <div class="result">
-          <!-- <h2 class="name">Bernards Liliy</h2> -->
-          <!-- <div class="picture"></div> -->
-        </div>
+       <a href="#" class="navlink" >Home</a>
+        <!-- <a href="#">About</a> -->
+          <a href="/#/register" ng-hide=isLoggedIn()>Register</a>
+            <a href="/#/login" ng-hide="isLoggedIn()">Log in</a>
+              <a href="/#/home" ng-click="logOut()" ng-show= isLoggedIn()>Log out</a>
+                <a href="#/flower" class="logname">{{ currentUser().username }}</a>
 
 
-      </div>
-    <script src="jquery/dist/jquery.js"></script> 
-    <script src="main.js"></script>
-  </body>
+                  <h2 class="title">Dallies & Lallies</h2>
+                  <span class="glyphicons glyphicons-flower"></span>
+     </div>
+      <ui-view></ui-view>
+ 
+                    <script src="javascripts/app.js"></script>
+                  <script src="javascripts/services/auth.js"></script>
+                <script src="javascripts/services/flowers.js"></script>
+              <script src="javascripts/services/users.js"></script>
+            <script src="javascripts/controllers/authController.js"></script>
+          <script src="javascripts/controllers/mainController.js"></script>
+        <script src="javascripts/controllers/flowerController.js"></script>
+      <script src="javascripts/controllers/navController.js"></script>
+   <script src="jquery/dist/jquery.js"></script> 
+ </body>
 </html>
-
-<!-- onclick="saveImage()" -->

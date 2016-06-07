@@ -1,36 +1,50 @@
 app.factory('flowers', ['$http', function($http) {
- 
- var flowerService = {
+  console.log("hey im in flowers service");
+  var flowerService = {
 
-   var flowers = [
-     {
-       id: 0,
-       name:"Peony",
-       Image:"http://www.atlanticavenuegarden.com/wp-content/uploads/2013/04/Pink-Peony-resized1.jpg",
-       
-     }, 
+    results:[],
 
-     {
-       id: 1,
-       name:"Rose",
-       Image: "http://ghk.h-cdn.co/assets/cm/15/11/480x480/54ff702993280-6-purple-rose-meaning-de.jpg",
-     }, 
+    flowers : [{
+      id: 0,
+      name:"Peony",
+      Image:"images/rsz_photo-1432873837230-ba73612038b5.jpg",
+      description: "The peony is a flowering plant in the genus Paeonia,the family Paeoniaceae. Scientists differ on the number of species that can be distinguished ranging from 25 to 40,although the current consensus is 33 known species. Most are 0.25–1 metre tall, but some are woody shrubs 0.25–3.5 metres tall. They are regarded as a symbol of good fortune and a happy marriage, They can live to be ONE HUNDRED years old and they come in every color EXCEPT blue. In ancient times peonies were believed to relieve headaches and help with asthma. They natively grow in Asia, Southern Europe and Western North America",
+    }, {
+      id: 1,
+      name:"Rose",
+      Image: "images/rsz_photo-1453454267602-abda9ebb66a6.jpg",
+      description: "A rose is a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over a hundred species and thousands of cultivars. They form a group of plants that can be erect shrubs, climbing or trailing with stems that are often armed with sharp prickles. Flowers vary in size and shape and are usually large and showy, in colours ranging from white through yellows and reds. Most species are native to Asia, with smaller numbers native to Europe, North America, and northwestern Africa.",
+      
+    }, {
+      id: 2,
+      name:"St.Bernard Lily",
+      Image: "images/bernardsLily.jpg",
+      description: " It is native to Europe and Turkey, growing in dry pastures, stony places and open woods and flowering in early summer. The specific epithet liliago means lily-like or lily-carrier. Like many plants whose common names include lily, it is not closely related to the true lilies. "
+    }],
 
-     {
-       id: 2,
-       name:"St.Bernard Lily",
-       Image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Anthericum_liliago_June_2007-1.jpg/220px-Anthericum_liliago_June_2007-1.jpg",     
-     },
+  getResult:function(){
+    return $http.get('/flowers').then(function(data){
+      console.log(data);
+      angular.copy(data.data, flowerService.results);
+    })
+  },
 
-     {
-      id: 3,
-      name: "Silver Thistle",
-      iamge: "http://thumbs.dreamstime.com/t/dubbel-silverthistle-26653515.jpg",
-    }
+  
+    };  //flowerService
+  console.log(flowerService);
+  console.log("leaving flower service");
 
-   ];
-  };
- 
- return flowerService;
-
+  return flowerService;
 }]);
+
+
+// fetch: function() {
+//   console.log("in fetch");
+//       return $http.post('/classify').then(function(data){
+//         angular.copy(data.data, fflowersService.classify);
+//         console.log("in result");
+//         console.log(res);
+//       });
+//     },
+
+ 

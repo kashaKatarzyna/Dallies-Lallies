@@ -4,16 +4,18 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var passport = require('passport');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
-var fs     = require('fs');
-
 var app = express();
 
-app.use(express.static('public'));
-app.use(express.static('node_modules'));
+mongoose.connect(process.env.MONGOLAB_YELLOW_URI || 'mongodb://localhost/dalliesandlallies');
+
+// app.use(express.static('public'));
+// app.use(express.static('node_modules'));
 
 app.use(bodyParser.json());   // This is the type of body we're interested in
 app.use(bodyParser.urlencoded({extended: false}));

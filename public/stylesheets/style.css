@@ -1,35 +1,154 @@
+/*******************************************************GENERAL***********************************************************/
 *{
   margin: 0;
   padding: 0;
+  font-family: calibri, sans-serif;
 }
 
 body{
   font-family: calibri, sans-serif;
 }
 
-.nav a{
-  width: 20%; 
-  float: left;
-  text-align: center;
-  color: white; 
-  font-family: calibri, sans-serif;
-  text-transform: uppercase;
-  font-weight: 300;
-  text-decoration: none;
+/*******************************************************HOME PAGE****************************************************/
+
+/***********************************************UPLOAD AND SUBMIT BUTTONS*/
+label.file input[type="file"] {
+    position: fixed;
+    top: -1000px;
 }
 
-h2{
+/*****************************UPLOAD BUTTON*/
+.file{
+    border: 2px solid #AAA;
+    border-radius: 4px;
+    padding: 2px 5px;
+    margin: 2px;
+    background:#FF7975;
+    display: inline-block;
+}
+.file:hover {
+    background: #FF7975;
+}
+.file:active {
+    background: #FF7975;
+}
+.file :invalid + span {
+    color: #FF7975;
+}
+.file :valid + span {
+    color: #FF7975;
+}
+
+/******************************************SUBMIT BUTTON*/
+label.submitFile input[type="submit"] {
+    position: fixed;
+    top: -1000px;
+}
+
+.submitFile{
+    border: 2px solid #AAA;
+    border-radius: 4px;
+    padding: 2px 5px;
+    margin: 2px;
+    background: #FF7975;
+    display: inline-block;
+}
+.submitFile:hover {
+    background: #FF7975;
+}
+.submitFile:active {
+    background: #FF7975;
+}
+.submitFile :invalid + span {
+    color: #FF7975;
+}
+.submitFile :valid + span {
+    color: #FF7975;
+}
+
+
+/*.submitFile{
+    margin: 0 auto;
+    cursor: pointer;
+    width: 65px;
+    color: black;
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.submitFile:hover{
+  color: #FF7975;
+}*/
+
+
+/*****************************************SEE RESULTS TAG*/
+#value{
+  height: 20px;
+  width: 10px;
+  font-size: 17px;
+}
+
+.resultsFile{
+  height: 20px;
+  width: 10px;
+  color: #FF7975;
+}
+
+.resultsFile:hover{
+  color: #FF7975;
+}
+
+.resultsFile:visited{
+  color: #FF7975;
+}
+
+.selectImg{
+    font-size: 19px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 24px;
+}
+
+/**********************************NAVBAR***************/
+
+a:-webkit-any-link{
+text-decoration:none !important;
+}
+
+.nav a{
+  width: 33%;
+  float: left;
   text-align: center;
   color: white;
   font-family: calibri, sans-serif;
   text-transform: uppercase;
   font-weight: 300;
-  margin-top: 60px;
-
+  text-decoration: none;
+  font-size: 18px;
 }
 
+.logname{
+  color: #FF7975 !important;
+}
+
+
+/***************************************TITLE-DL, H1,H1,H3*/
+.title, .logIn, .register{
+  text-align: center;
+  color: white;
+  font-family: calibri, sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: 97px;
+  font-size: 22px;
+}
+
+
+/****************************************BACKGROUND IMAGE-HOME PAGE*/
 .background-wrap{
-  position: fixed;
+  position: absolute;
   z-index: -1000;
   width: 100%;
   height: 100%;
@@ -38,6 +157,7 @@ h2{
   left: 0;
 }
 
+/***********************************VIDEO*/
 #video-bg-elem{
   position: absolute;
   top: 0;
@@ -46,7 +166,131 @@ h2{
   min-width: 100%
 }
 
+
+/*****************************************ALL CONTENT INDEX.HTML*/
+/************opacity*/
 .content{
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  z-index: -100;
+  background-color: rgba(0,0,0,0.7);
+  pointer-events: none;
+}
+
+.content, .lets{
+  text-align: center; 
+  font-size: 47px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: white;
+  padding-top: 5%;
+  margin-bottom: 36px;
+}
+
+/*.content p{
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #aaa;
+}*/
+
+.glyphicons-flower{
+  color: white;
+}
+
+/*******************************************FLOWER-RESULTS TEMPLATE************************************************************************/
+
+ @media only screen and (min-device-width: 400px) {
+
+.name{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 30px;
+    margin-top: 126px;
+    margin-bottom: 34px;
+    font-family: calibri, sans-serif;
+  }
+
+.imageDisplay{
+  display: block;
+  margin: 0 auto;
+  background-size: 100% 100%;
+  width: 25%;
+  height: 12%;
+  margin-bottom: 38px;
+  margin-top: 70px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+ }
+}
+
+ .description{
+    color: white;
+    text-align: center;
+    padding: 50px;
+    font-size: 18px;
+    font-family: calibri, sans-serif;
+    font-weight: 300;
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+ }
+}
+
+/*LEAVE IT HERE, FOR SOME REASON WHEN REMOVED OR PLACED ELSEWHERE IT MESSES UP REG AND LOG PAGE*/
+
+/*a:hover{
+  color: #FF7975 !important;  
+}*/
+
+/*a:visited{
+  color: #FF7975 !important;  
+}*/
+
+/*active come after hover*/
+.nav a:hover{
+  width: 20%; 
+  float: left;
+  text-align: center;
+  color: #FF7975 !important; 
+  text-transform: uppercase;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+/*.nav a:hover{
+  color: #FF7975 !important;  
+}*/
+
+.nav a:active{
+  color: #FF7975;  
+}
+
+/***************************************BACKGROUND IMAGE TEMPLATES**********************************************/
+
+#background{
+  z-index: -1000
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  z-index: -1000;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.stretch {
+    width:100%;
+    height:100%;
+}
+
+.registrationContent{
   position: absolute;
   width: 100%;
   min-height: 100%;
@@ -54,78 +298,109 @@ h2{
   background-color: rgba(0,0,0,0.7);
 }
 
-.content h1{
-  text-align: center;
-  font-size: 65px;
-  text-transform: uppercase;
+
+/*********************************************REGISTRATION TEMPLATE***************************************************/
+/***********************************************LOGIN TEMPLATE************************************************/
+
+#slick-registration {
+  width: 220px;
+  height: 155px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -110px;
+  margin-top: -75px;
+
+  -webkit-animation: login 1s ease-in-out;
+  -moz-animation: login 1s ease-in-out;
+  -ms-animation: login 1s ease-in-out;
+  -o-animation: login 1s ease-in-out;
+  animation: login 1s ease-in-out;
+}
+
+#slick-registration label {
+  display: none;
+}
+
+/*input fields*/
+#slick-registration input[type="text"],#slick-registration input[type="password"] {
+  width: 100%;
+  height: 40px;
+  positon: relative;
+  margin-top: 7px;
+  font-size: 14px;
+  color: black;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, .49);
+  font-family:calibri, sans-serif;
   font-weight: 300;
-  color: white;
-  padding-top: 15%;
-  margin-bottom: 10px;
-}
 
-.content p{
-  text-align: center;
-  font-size: 20px;
-  letter-spacing: 3px;
-  color: #aaa;
-}
-
- #text-input{
-    display: block;
-    margin:0 auto;
-    width: 20%;
-    height: 20px;
-    font-size: 15px;
-    font-family: calibri, sans-serif;
-    text-align: center;
-    appearance: none;
-    /*text-transform: uppercase;*/
-    font-weight: 200;
-    padding: 1px;
-}
-
-.submit-text{
-  display: block;
-  margin:0 auto;
-  height: 20px;
-  font-size: 15px;
-  text-transform: uppercase;
-  font-weight: 200;
-  padding: 1px;
-  appearance: none;
-
-}
-
-
-
-/*/*.picture{
+  padding-left: 20px;
   
-   /*background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Anthericum_liliago_June_2007-1.jpg/220px-Anthericum_liliago_June_2007-1.jpg") no-repeat;*/
-  /* height: 500px;
-    margin: 0 auto;
-    /*margin-top: 242px;*/
-    /*width: 300px;*/
-        /*margin-left: 560px;*/
-    /*margin-top: initial;*/*/
-
-/*}*/
-
-/*.name{
-  text-align: center;
-  color: white;
-  font-family: calibri, sans-serif;
-  text-transform: uppercase;
-  font-weight: 300;
-  margin-top: 60px;
-      margin-top: 218px;
-    margin-bottom: 54px;*/
-/*}*/*/
-
-.results{
-    height: 368px;
-    margin-top: 153px;
-    margin-left: 304px;
-    background-repeat: no-repeat;
-    background-size: contain;
 }
+
+/*submit button*/
+#slick-registration input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  margin-top: 7px;
+  font-size: 20px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, .49);
+  font-family:calibri, sans-serif;
+  font-weight: 300;
+
+  border-radius: 6px;
+
+  background-image: -moz-linear-gradient(bottom,  #FF7975 0%, #768ee4 100%);
+  background-image: -o-linear-gradient(bottom,  #FF7975 0%, #768ee4 100%);
+  background-image: -ms-linear-gradient(bottom,  #FF7975 0%, #768ee4 100%);
+  background-image: linear-gradient(bottom,  #FF7975 0%, #768ee4 100%);
+  
+  cursor: pointer;
+}
+
+/*submit button hover gradient colors*/
+#slick-registration input[type="submit"]:hover {
+  background-color: #FF7975;
+  background-image: -webkit-linear-gradient(bottom,  #FF7975 0%, #859bef 100%);
+  background-image: -moz-linear-gradient(bottom,  #FF7975 0%, #859bef 100%);
+  background-image: -o-linear-gradient(bottom,  #FF7975 0%, #859bef 100%);
+  background-image: -ms-linear-gradient(bottom,  #FF7975 0%, #859bef 100%);
+  background-image: linear-gradient(bottom,  #FF7975 0%, #859bef 100%);
+}
+
+/* HTML5 display-role reset for older browsers */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+  display: block;
+}
+
+/*transition after refresh and registration*/
+@-webkit-keyframes "login" {
+ 0% {
+   filter: alpha(opacity=0);
+   opacity: 0;
+   margin-top: -50px;
+ }
+ 100% {
+   filter: alpha(opacity=100);
+   opacity: 1;
+   margin-top: -75px;
+ }
+}
+
+/* Main CSS */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+
+
