@@ -1,5 +1,6 @@
 var app = angular.module('flowerPower', ['ui.router']);
 app.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+  
   $stateProvider
     .state('home', {
       url: '/home',
@@ -35,6 +36,11 @@ app.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $url
       url: '/flower',
       templateUrl: '/templates/flower.html',
       controller: 'FlowerCtrl',
+      resolve: {
+        promise:['flowers', 'users', function(flowers, users){
+          flowers.getResult();
+        }]
+      }
      })
     
   $urlRouterProvider.otherwise('home');

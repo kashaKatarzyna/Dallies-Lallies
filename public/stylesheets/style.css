@@ -19,12 +19,21 @@ label.file input[type="file"] {
 
 /*****************************UPLOAD BUTTON*/
 .file{
-    border: 2px solid #AAA;
+    /*border: 2px solid #AAA;
     border-radius: 4px;
     padding: 2px 5px;
     margin: 2px;
     background:#FF7975;
+    display: inline-block;*/
+
+        border: #DA6D6D solid;
+    border-radius: 4px;
+    padding: 10px 5px;
+    margin: 6px;
+    background: white;
     display: inline-block;
+    width: 109px;
+    text-align: center;
 }
 .file:hover {
     background: #FF7975;
@@ -209,7 +218,7 @@ text-decoration:none !important;
     text-transform: uppercase;
     font-weight: 300;
     font-size: 30px;
-    margin-top: 126px;
+    margin-top: 82px;
     margin-bottom: 34px;
     font-family: calibri, sans-serif;
   }
@@ -218,10 +227,11 @@ text-decoration:none !important;
   display: block;
   margin: 0 auto;
   background-size: 100% 100%;
-  width: 25%;
+  margin-bottom: 7px;
+  margin-top: 45px;
   height: 12%;
-  margin-bottom: 38px;
-  margin-top: 70px;
+  margin-bottom: 7px;
+  margin-top: 45px;
   background-repeat: no-repeat;
   border-radius: 50%;
  }
