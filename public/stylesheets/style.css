@@ -2,7 +2,7 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: calibri, sans-serif;
+  /*font-family: calibri, sans-serif;*/
 }
 
 body{
@@ -17,23 +17,23 @@ label.file input[type="file"] {
     top: -1000px;
 }
 
+.opis{
+      font-size: 15px;
+    font-family: inherit;
+    font-weight: 300;
+    margin: 0 auto;
+
+}
+
 /*****************************UPLOAD BUTTON*/
 .file{
-    /*border: 2px solid #AAA;
-    border-radius: 4px;
-    padding: 2px 5px;
-    margin: 2px;
-    background:#FF7975;
-    display: inline-block;*/
-
-        border: #DA6D6D solid;
-    border-radius: 4px;
-    padding: 10px 5px;
-    margin: 6px;
-    background: white;
-    display: inline-block;
-    width: 109px;
+    border: #FF7975 2px solid;
+    padding: 6px 6px;
+    width: 20px;
+    margin: 0 auto;
+    height: -5px;
     text-align: center;
+    border-radius: 50%;
 }
 .file:hover {
     background: #FF7975;
@@ -55,12 +55,13 @@ label.submitFile input[type="submit"] {
 }
 
 .submitFile{
-    border: 2px solid #AAA;
-    border-radius: 4px;
-    padding: 2px 5px;
-    margin: 2px;
-    background: #FF7975;
-    display: inline-block;
+    border: #FF7975 2px solid;
+    padding: 6px 6px;
+    width: 20px;
+    margin: 0 auto;
+    height: -5px;
+    text-align: center;
+    border-radius: 50%;
 }
 .submitFile:hover {
     background: #FF7975;
@@ -75,20 +76,10 @@ label.submitFile input[type="submit"] {
     color: #FF7975;
 }
 
-
-/*.submitFile{
-    margin: 0 auto;
-    cursor: pointer;
-    width: 65px;
-    color: black;
-    font-size: 15px;
-    font-weight: 300;
-    margin-bottom: 15px;
+.submit{
+    margin-top: 16px;
+    margin-bottom: 8px;
 }
-
-.submitFile:hover{
-  color: #FF7975;
-}*/
 
 
 /*****************************************SEE RESULTS TAG*/
@@ -102,6 +93,7 @@ label.submitFile input[type="submit"] {
   height: 20px;
   width: 10px;
   color: #FF7975;
+  font-size: 19px;
 }
 
 .resultsFile:hover{
@@ -118,6 +110,12 @@ label.submitFile input[type="submit"] {
     font-weight: 300;
     color: white;
     margin-bottom: 24px;
+}
+
+.opis{
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
 /**********************************NAVBAR***************/
@@ -151,7 +149,7 @@ text-decoration:none !important;
   text-transform: uppercase;
   font-weight: 300;
   margin-top: 97px;
-  font-size: 22px;
+  font-size: 29px;
 }
 
 
@@ -196,13 +194,6 @@ text-decoration:none !important;
   padding-top: 5%;
   margin-bottom: 36px;
 }
-
-/*.content p{
-  text-align: center;
-  font-size: 20px;
-  letter-spacing: 3px;
-  color: #aaa;
-}*/
 
 .glyphicons-flower{
   color: white;
@@ -252,14 +243,6 @@ text-decoration:none !important;
 
 /*LEAVE IT HERE, FOR SOME REASON WHEN REMOVED OR PLACED ELSEWHERE IT MESSES UP REG AND LOG PAGE*/
 
-/*a:hover{
-  color: #FF7975 !important;  
-}*/
-
-/*a:visited{
-  color: #FF7975 !important;  
-}*/
-
 /*active come after hover*/
 .nav a:hover{
   width: 20%; 
@@ -270,10 +253,6 @@ text-decoration:none !important;
   font-weight: 300;
   text-decoration: none;
 }
-
-/*.nav a:hover{
-  color: #FF7975 !important;  
-}*/
 
 .nav a:active{
   color: #FF7975;  
@@ -300,6 +279,7 @@ text-decoration:none !important;
     height:100%;
 }
 
+/*and login*/
 .registrationContent{
   position: absolute;
   width: 100%;
@@ -309,7 +289,7 @@ text-decoration:none !important;
 }
 
 
-/*********************************************REGISTRATION TEMPLATE***************************************************/
+/*********************************************REGISTRATION TEMPLATE**************************************************
 /***********************************************LOGIN TEMPLATE************************************************/
 
 #slick-registration {
@@ -385,7 +365,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  /*font-size: 100%;*/
   font: inherit;
   vertical-align: baseline;
 }
@@ -409,7 +389,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 }
 
 /* Main CSS */
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+/** { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }*/
 
 
 

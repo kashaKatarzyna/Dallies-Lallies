@@ -6,22 +6,13 @@ app.controller('MainCtrl', ['$scope','flowers', function($scope, flowers){
   $scope.result="";
   flowers.getResult();
   $scope.results = flowers.results;
+  $scope.indicator = false;
+  
+  $scope.showRes = function(){
+    $scope.indicator = true;
+  }
 
   console.log($scope.flower)
-
-//   $scope.sendFlower = function(){
-//     console.log($scope.myFile);
-
-//     // var data = {
-//     //   name:"image",
-//     //   file: $scope.myFile
-//     // };       
-//     flowers.getFlower($scope.myFile);
-//   };
-
-//   $scope.showResult = function(){
-//     console.log($scope.result);
-//   };
 
 }]);
 
