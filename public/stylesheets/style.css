@@ -201,7 +201,7 @@ text-decoration:none !important;
 
 /*******************************************FLOWER-RESULTS TEMPLATE************************************************************************/
 
- @media only screen and (min-device-width: 400px) {
+ @media screen and (min-device-width: 480px) {
 
 .name{
     color: white;
@@ -211,7 +211,7 @@ text-decoration:none !important;
     font-size: 30px;
     margin-top: 82px;
     margin-bottom: 34px;
-    font-family: calibri, sans-serif;
+    font-family: calibri, sans-serif italic;
   }
 
 .imageDisplay{
